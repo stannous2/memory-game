@@ -12,7 +12,7 @@ const Navbar = props => (
           <a className="nav-link">Click an image to begin!</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link">Score:  0 | Top Score: 0</a>
+          <a className="nav-link">{`Score:  ${props.score} | Top Score: 0`}</a>
         </li>
         
       </ul>
