@@ -1,27 +1,27 @@
 [
   {
     "id": 1,
-    "image": "/images/img13.jpeg"
+    "image": "/images/donkey2.jpg"
       
   },
   {
     "id": 2,
-    "image": "/images/img2.jpeg"
+    "image": "/images/img1.jpeg"
       
   },
   {
     "id": 3,
-    "image": "/images/img3.jpeg"
+    "image": "/images/pig1.jpg"
     
   },
   {
     "id": 4,
-    "image": "/images/img4.jpeg"
+    "image": "/images/horse1.jpg"
       
   },
   {
     "id": 5,
-    "image": "/images/img5.jpeg"
+    "image": "/images/cat1.jpg"
       
   },
   {
@@ -31,17 +31,17 @@
   },
   {
     "id": 7,
-    "image": "/images/img7.jpeg"
+    "image": "/images/parrot2.jpg"
     
   },
   {
     "id": 8,
-    "image": "/images/img8.jpeg"
+    "image": "/images/pig2.jpg"
       
   },
   {
     "id": 9,
-    "image": "/images/img9.jpeg"
+    "image": "/images/cat2.jpg"
       
   },
   {
@@ -51,12 +51,12 @@
   },
   {
     "id": 11,
-    "image": "/images/img11.jpeg"
+    "image": "/images/horse2.jpg"
     
   },
   {
     "id": 12,
-    "image": "/images/img12.jpeg"
+    "image": "/images/donkey1.jpg"
       
   }
     ]
