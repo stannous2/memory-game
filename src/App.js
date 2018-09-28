@@ -9,18 +9,16 @@ class App extends Component {
   // Setting this.state.animals to the animals json array
     state = {
       animals,
-      firstGuess: false,
-      secondGuess: false,
       score: 0,
       topscore: 0,
-      clickedCards: []
+      clickedCards: [],
+      message: "Click an image to begin!"
     }
   
   shuffleCards = () => {
     for(let i = animals.length -1; i >= 0; i--){
       //remove an item at randomized index
       let splicedArray = (animals.splice(Math.floor(Math.random() * animals.length), 1));
-      // console.log('splicedArray', splicedArray[0]);
       animals.push(splicedArray[0])
     }
     console.log('randomized array... ', animals);
@@ -34,20 +32,20 @@ class App extends Component {
     if(!this.state.clickedCards.includes(id)){
       this.state.clickedCards.push(id);
       score++;
-      topscore++
-      this.setState({ score, topscore })
+      if (score >= topscore) {
+        topscore = score;
+      }
+      this.setState({ score, topscore, message: 'You guessed correctly!' })
     }else {
-      this.setState({ score: 0 })
-      alert('card has been clicked...')
+      this.setState({ score: 0, clickedCards: [], message: 'You guessed incorrectly!' })
     }
-    
   };
   
   // Map over this.state.animals and render AnimalCard component for each animal object
   render() {
     return (
       <div>
-      <Navbar score={this.state.score} topscore={this.state.topscore}/>
+      <Navbar score={this.state.score} topscore={this.state.topscore} message={this.state.message}/>
       <Title />
       <Wrapper>
         {this.state.animals.map(animals => (
@@ -63,6 +61,4 @@ class App extends Component {
     );
   }
 }
-
-
 export default App;
